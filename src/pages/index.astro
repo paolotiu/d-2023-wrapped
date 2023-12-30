@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../global.css';
+import Countdown from '../components/Countdown.astro';
+---
+
+<Layout>
+  <Countdown />
+  <!-- <div class="w-full h-full bg-white">
+    <div class="grid place-items-center h-full relative [&>*]:opacity-0">
+      <h1 class="initial-hi absolute">Hi Dayne!</h1>
+      <p class="home-body absolute text-center font-medium">
+        I know how much you love capturing photos, videos, and moments in time.
+      </p>
+      <p class="home-body-2 absolute text-center font-medium">
+        So here's a little something consisting of those that would help you look back on this year.
+      </p>
+      <p class="home-body-3 absolute text-center font-medium">Hope you enjoy it!</p>
+      <div class="title absolute">
+        <h2 class="text-4xl">2023 <span class="text-base">ft. gabe</span></h2>
+        <div class="pt-8"></div>
+
+        <a href="/jan" class="mx-auto block text-center bg-black text-white px-4 py-2 rounded-full">
+          Start</a
+        >
+      </div>
+    </div>
+  </div> -->
+</Layout>
+
+<script>
+  import { animate, type TimelineDefinition, timeline } from 'motion';
+
+  const params = new URLSearchParams(window.location.search);
+
+  const seq: TimelineDefinition = [
+    [
+      '.initial-hi',
+      {
+        opacity: [0, 1, 0],
+      },
+      {
+        duration: 4,
+      },
+    ],
+    [
+      '.home-body',
+      {
+        opacity: [0, 1, 1, 0],
+      },
+      {
+        duration: 6,
+        at: '-0.5',
+      },
+    ],
+    [
+      '.home-body-2',
+      {
+        opacity: [0, 1, 1, 0],
+      },
+      {
+        duration: 8,
+        at: '-0.5',
+      },
+    ],
+    [
+      '.home-body-3',
+      {
+        opacity: [0, 1, 1, 0],
+      },
+      {
+        duration: 4,
+        at: '-0.5',
+      },
+    ],
+    [
+      '.title',
+      {
+        opacity: [0, 1],
+      },
+      {
+        duration: 4,
+        at: '-0.5',
+      },
+    ],
+  ];
+
+  const t = timeline(seq);
+  if (params.get('skip')) {
+    t.finish();
+  }
+</script>

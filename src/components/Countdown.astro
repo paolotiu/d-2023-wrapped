@@ -1,0 +1,46 @@
+<div class="h-full grid place-items-center text-2xl font-medium">
+  <div class="flex">
+    <span id="days"> 00</span>:
+    <span id="hours"> 00</span>
+     :
+    <span id="minutes"> 00</span>
+     :
+    <span id="seconds"> 00</span>
+  </div>
+</div>
+
+<script>
+  // countdown to new year
+
+  const daysEl = document.getElementById('days') as HTMLElement;
+  const hoursEl = document.getElementById('hours') as HTMLElement;
+  const minutesEl = document.getElementById('minutes') as HTMLElement;
+  const secondsEl = document.getElementById('seconds') as HTMLElement;
+
+  const newYears = '1 Jan 2024';
+
+  function countdown() {
+    const newYearsDate = new Date(newYears);
+    const currentDate = new Date();
+
+    const totalSeconds = (newYearsDate.getTime() - currentDate.getTime()) / 1000;
+
+    const days = Math.floor(totalSeconds / 3600 / 24);
+    const hours = Math.floor(totalSeconds / 3600) % 24;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
+    const seconds = Math.floor(totalSeconds) % 60;
+
+    daysEl.innerHTML = days.toString();
+    hoursEl.innerHTML = formatTime(hours);
+    minutesEl.innerHTML = formatTime(minutes);
+    secondsEl.innerHTML = formatTime(seconds);
+  }
+
+  function formatTime(time: number) {
+    return time < 10 ? `0${time}` : time.toString();
+  }
+
+  countdown();
+
+  setInterval(countdown, 1000);
+</script>

@@ -1,0 +1,36 @@
+---
+import '../global.css';
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Dayne's 2023 Wrapped</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <main class="p-2 px-4" transition:animate="fade">
+      <slot />
+    </main>
+    <style is:global>
+      html,
+      body,
+      main {
+        height: 100%;
+      }
+      h1 {
+        @apply text-3xl font-bold;
+      }
+
+      p {
+        @apply max-h-[25ch];
+      }
+    </style>
+  </body>
+</html>
