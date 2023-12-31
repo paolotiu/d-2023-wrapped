@@ -45,6 +45,10 @@
     hoursEl.innerHTML = formatTime(hours);
     minutesEl.innerHTML = formatTime(minutes);
     secondsEl.innerHTML = formatTime(seconds);
+
+    document.title = `${formatTime(days)}:${formatTime(hours)}:${formatTime(minutes)}:${formatTime(
+      seconds
+    )}`;
   }
 
   function formatTime(time: number) {
