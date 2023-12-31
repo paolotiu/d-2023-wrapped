@@ -6,8 +6,8 @@ import Countdown from '../components/Countdown.astro';
 
 <script>
   // if past new year
-  // const d = '2024-01-01T00:00:00';
-  const d = '2022-01-01T00:00:00';
+  const d = '2024-01-01T00:00:00';
+  // const d = '2022-01-01T00:00:00';
   const isPastNewYear = new Date().getTime() > new Date(d).getTime();
 
   if (!isPastNewYear) {

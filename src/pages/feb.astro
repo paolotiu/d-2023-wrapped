@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">February</h1>
+
+    <div class="pb-4">
+      <img class="mx-auto w-[60%] rounded" src="/feb/tooth.JPG" />
+    </div>
+
+    <p>
+      You took care of me when I had my wisdom teeth removed. You made sure to make me feel as
+      comfortable as possible ❤️
+    </p>
+
+    <div class="pb-4 pt-8 relative z-10" id="v-imgs">
+      <img class="w-1/2 rounded absolute right-0 rotate-[-2deg]" src="/feb/flower.JPG" />
+      <img
+        class="w-1/2 rounded absolute left-[80px] translate-y-5 rotate-[4deg]"
+        src="/feb/steak.JPG"
+      />
+      <img class="w-1/2 rounded absolute -rotate-6" src="/feb/kiss.JPG" />
+      <img class="w-1/2 select-none opacity-0" src="/feb/kiss.JPG" />
+    </div>
+    <div>
+      <img
+        class="mx-auto w-[90%] rounded -rotate-[6deg] -translate-y-[60px]"
+        src="/feb/table.JPG"
+      />
+    </div>
+    <p>Who could forget valentines? We ate out at NINYO then went to walk at my house.</p>
+  </section>
+</Layout>
+<script>
+  const imgs = document.querySelectorAll('#v-imgs img') as NodeListOf<HTMLImageElement>;
+
+  imgs.forEach((img) => {
+    img.addEventListener('touchstart', () => {
+      // add z-index
+      imgs.forEach((img) => {
+        img.style.zIndex = '0';
+      });
+
+      img.style.zIndex = '1';
+    });
+  });
+</script>
