@@ -17,14 +17,13 @@
   const minutesEl = document.getElementById('minutes') as HTMLElement;
   const secondsEl = document.getElementById('seconds') as HTMLElement;
 
-  const newYears = '1 Jan 2024 00:00:00';
   // const newYears = '1 Jan 2022 00:00:00';
   // Dec 30 7pm
 
   let id = null as any;
 
   function countdown() {
-    const newYearsDate = new Date(newYears);
+    const newYearsDate = new Date(END_DATE);
     const currentDate = new Date();
 
     const totalSeconds = (newYearsDate.getTime() - currentDate.getTime()) / 1000;
