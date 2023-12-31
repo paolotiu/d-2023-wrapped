@@ -1,0 +1,38 @@
+---
+import Next from '../components/Next.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">June</h1>
+    <div class="pb-4 relative h-[400px]">
+      <img class="w-1/2 rounded absolute left-0 rotate-[-2deg]" src="/june/view.JPG" />
+      <img class="w-1/2 rounded absolute right-0 rotate-[2deg]" src="/june/goat.JPG" />
+      <img
+        class="w-1/2 rounded absolute left-0 translate-y-[235px] rotate-[-2deg]"
+        src="/june/photos.JPG"
+      />
+      <img
+        class="w-1/2 rounded absolute right-2 translate-y-[130px] rotate-[-1deg]"
+        src="/june/kiss1.JPG"
+      />
+    </div>
+    <p>
+      I had the best birthday ever with you! You surprised me with a trip to Tagaytay! It wasn't
+      even close. You can see our GOATed photo also. I felt so loved that day ❤️
+    </p>
+    <div class="pt-8 pb-4 relative h-">
+      <img class="w-1/2 rounded absolute left-0 rotate-[4deg]" src="/june/kiss2.JPG" />
+      <img class="w-1/2 rounded absolute right-0 rotate-[-3deg]" src="/june/kiss3.JPG" />
+      <img class="w-1/2 rounded opacity-0 select-none left-0 rotate-[4deg]" src="/june/kiss2.JPG" />
+    </div>
+    <p>I love kissing you.</p>
+
+    <div class="pt-8 pb-4 flex items-center justify-center flex-col">
+      <img src="/june/nest.JPG" />
+    </div>
+    <p>A date high in the sky.</p>
+    <Next to="/july" title="July feels beachy" />
+  </section>
+</Layout>

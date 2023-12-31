@@ -1,0 +1,48 @@
+---
+import Next from '../components/Next.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">September</h1>
+    <div class="pb-4">
+      <div class="flex justify-center gap-2">
+        <img class="rounded w-1/2 rotate-2 translate-y-20" src="/sep/selfie.JPG" />
+        <img class="rounded w-1/2 -rotate-1" src="/sep/mirror.JPG" />
+      </div>
+      <div class="flex items-start gap-1">
+        <img class="rounded w-1/2 rotate-4 translate-y-20" src="/sep/elev.JPG" />
+        <img class="rounded w-1/2 -rotate-[5deg]" src="/sep/parents.JPG" />
+      </div>
+    </div>
+    <p>
+      You went to SM North to meet me after I bought my phone! We ate at Seoul Train after with my
+      parents. Double Date!!
+    </p>
+    <div class="grid grid-cols-2 gap-1 pt-8 pb-4 relative">
+      <img class="rounded w-full h-full -rotate-1" src="/sep/achie.JPG" />
+      <img class="rounded w-full h-full rotate-2" src="/sep/millas.JPG" />
+      <img class="rounded w-full h-full rotate-4" src="/sep/mag.JPG" />
+      <img class="rounded w-full h-full -rotate-2" src="/sep/damag.JPG" />
+      <img
+        class="rounded mx-auto -rotate-1 w-1/2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        src="/sep/kiss.JPG"
+      />
+    </div>
+
+    <p>Cafe + House hopping for our midterms!!</p>
+
+    <div class="pt-8 pb-4 relative">
+      <div class="flex">
+        <img class="rounded w-1/2 -rotate-1" src="/sep/pep.JPG" />
+        <img class="rounded w-1/2 rotate-2" src="/sep/shanghai.JPG" />
+      </div>
+    </div>
+    <p>Post Youth Church dinners!</p>
+
+    <img class="rounded w-full mt-8 mb-4" src="/sep/flowers.JPG" />
+    <p>Flowers + You = Art</p>
+    <Next to="/oct" title="October already?" />
+  </section>
+</Layout>

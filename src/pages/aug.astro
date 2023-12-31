@@ -1,0 +1,23 @@
+---
+import Next from '../components/Next.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">August</h1>
+    <div class="pb-4">
+      <img class="rounded" src="/aug/balut.JPG" />
+    </div>
+    <p>Balut!</p>
+    <div class="pt-8 pb-4">
+      <div class="grid grid-cols-2 gap-3">
+        <img class="rounded w-full h-full object-cover -rotate-3" src="/aug/result.JPG" />
+        <img class="rounded w-full h-full object-cover rotate-2" src="/aug/flowers.JPG" />
+      </div>
+      <img class="rounded w-full rotate-4" src="/aug/ser.JPG" />
+    </div>
+    <p>Sip n' Gogh date! My painting is so much better 🫣</p>
+    <Next title="Wake me up when September ends" to="/sep" />
+  </section>
+</Layout>

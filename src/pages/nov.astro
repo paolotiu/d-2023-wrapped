@@ -1,0 +1,37 @@
+---
+import Next from '../components/Next.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">November</h1>
+    <div class="pb-4 relative h-[450px]">
+      <img class="rounded w-1/2 rotate-3" src="/nov/cry.JPG" />
+      <img class="rounded w-1/2 right-0 -rotate-2 absolute -translate-y-16" src="/nov/kiss.JPG" />
+    </div>
+    <p>Decided to break up. Heartbroken.</p>
+    <div class="pt-10 pb-4 relative h-[550px]">
+      <div class="grid grid-cols-2">
+        <img class="rounded rotate-12" src="/nov/food.JPG" />
+        <img class="rounded -rotate-12" src="/nov/saan2.JPG" />
+        <img class="rounded -rotate-12" src="/nov/saan.JPG" />
+        <img class="rounded rotate-12" src="/nov/bike.JPG" />
+        <img
+          class="rounded absolute top-1/2 left-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/nov/cute.JPG"
+        />
+      </div>
+    </div>
+    <p>Happy and sad at the same time. Cried so much.</p>
+    <div class="pt-8 pb-4 relative">
+      <div class="flex">
+        <img class="rounded w-1/2 rotate-3" src="/nov/wild.JPG" />
+        <img class="rounded w-1/2 right-0 -rotate-2" src="/nov/ice.JPG" />
+      </div>
+    </div>
+    <p>Last date as a couple...for now</p>
+
+    <Next to="/dec" title="December together" />
+  </section>
+</Layout>
