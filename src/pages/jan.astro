@@ -3,5 +3,56 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <h1>January</h1>
+  <section class="py-8 px-4">
+    <h1 class="mb-8">January</h1>
+    <div class="h-[280px] relative" id="tags-imgs">
+      <img class="w-1/2 rounded absolute -rotate-6" src="/jan/kiss.jpg" />
+      <img
+        class="w-1/2 rounded absolute left-[100px] translate-y-5 rotate-[4deg]"
+        src="/jan/tags.jpg"
+      />
+      <img class="w-1/2 rounded absolute -right-4 rotate-[-2deg]" src="/jan/bite.jpg" />
+    </div>
+    <p>
+      In January, we went to Tagaytay! <br />We ate in Breakfast @ Antonio's and looked at museums.
+    </p>
+
+    <div class="pt-8 pb-4 relative" id="w-imgs">
+      <img class="w-1/2 rounded absolute rotate-[4deg]" src="/jan/workout.jpg" />
+      <img class="w-1/2 rounded absolute right-0 -rotate-6" src="/jan/food.jpg" />
+      <img class="w-1/2 rounded opacity-0 select-none" src="/jan/workout.jpg" />
+    </div>
+    <p class="">We also worked out (amazingly) in January! <br /> + ate food of course 😋</p>
+    <div class="pt-8 pb-4">
+      <img class="mx-auto rounded" src="/jan/kiwi.jpg" />
+    </div>
+    <p>Kiwi looked like this!!! So cute 🥺</p>
+  </section>
 </Layout>
+
+<script>
+  const imgs = document.querySelectorAll('#tags-imgs img') as NodeListOf<HTMLImageElement>;
+  const imgs2 = document.querySelectorAll('#w-imgs img') as NodeListOf<HTMLImageElement>;
+
+  imgs.forEach((img) => {
+    img.addEventListener('touchstart', () => {
+      // add z-index
+      imgs.forEach((img) => {
+        img.style.zIndex = '0';
+      });
+
+      img.style.zIndex = '1';
+    });
+  });
+
+  imgs2.forEach((img) => {
+    img.addEventListener('touchstart', () => {
+      // add z-index
+      imgs2.forEach((img) => {
+        img.style.zIndex = '0';
+      });
+
+      img.style.zIndex = '1';
+    });
+  });
+</script>
