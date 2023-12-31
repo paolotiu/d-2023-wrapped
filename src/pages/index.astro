@@ -2,12 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import '../global.css';
 import Countdown from '../components/Countdown.astro';
+import { END_DATE as e } from '../constants';
+
+const END_DATE = e;
 ---
 
 <script>
   // if past new year
-  // const d = '2022-01-01T00:00:00';
-  const isPastNewYear = new Date().getTime() > new Date(END_DATE).getTime();
+  const d = '2024-01-01T06:00:00';
+  const isPastNewYear = new Date().getTime() > new Date(d).getTime();
 
   if (!isPastNewYear) {
     window.location.href = '/cntdwn';
