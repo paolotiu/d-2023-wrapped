@@ -4,9 +4,17 @@ import '../global.css';
 import Countdown from '../components/Countdown.astro';
 ---
 
+<script>
+  // if past new year
+  const d = '2024-01-01T00:00:00';
+  const isPastNewYear = new Date().getTime() > new Date(d).getTime();
+
+  if (!isPastNewYear) {
+    window.location.href = '/cntdwn';
+  }
+</script>
 <Layout>
-  <Countdown />
-  <!-- <div class="w-full h-full bg-white">
+  <div class="w-full h-full bg-white">
     <div class="grid place-items-center h-full relative [&>*]:opacity-0">
       <h1 class="initial-hi absolute">Hi Dayne!</h1>
       <p class="home-body absolute text-center font-medium">
@@ -25,7 +33,7 @@ import Countdown from '../components/Countdown.astro';
         >
       </div>
     </div>
-  </div> -->
+  </div>
 </Layout>
 
 <script>
